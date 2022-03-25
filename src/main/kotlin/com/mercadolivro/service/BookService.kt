@@ -28,7 +28,6 @@ class BookService(
     }
 
     fun findById(id: Int): BookModel {
-        val format = Errors.ML1O1.message.format(id)
         return repository.findById(id).orElseThrow{NotFoundException(Errors.ML1O1.message.format(id), Errors.ML1O1.code)}
     }
 
@@ -53,5 +52,9 @@ class BookService(
             book.status = BookStatus.DELETADO
         }
         repository.saveAll(books)
+    }
+
+    fun findAllByIds(bookId: Set<Int>):List<BookModel> {
+        return repository.findAllById(bookId).toList()
     }
 }

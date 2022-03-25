@@ -16,6 +16,7 @@ repositories {
 	mavenCentral()
 }
 
+
 dependencies {
 
 	implementation("org.springframework.boot:spring-boot-starter-validation:2.6.4")
@@ -27,7 +28,14 @@ dependencies {
 	implementation("mysql:mysql-connector-java")
 	implementation("org.flywaydb:flyway-core:8.5.4")
 	implementation("org.flywaydb:flyway-mysql:8.5.4")
+
+	implementation("io.springfox:springfox-swagger2:3.0.0")
+	implementation("io.springfox:springfox-swagger-ui:3.0.0")
+	implementation("io.springfox:springfox-boot-starter:3.0.0")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+
 }
 
 tasks.withType<KotlinCompile> {
