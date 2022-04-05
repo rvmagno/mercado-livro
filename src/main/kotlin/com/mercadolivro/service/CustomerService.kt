@@ -2,7 +2,7 @@ package com.mercadolivro.service
 
 import com.mercadolivro.enums.CustomerStatus
 import com.mercadolivro.enums.Errors
-import com.mercadolivro.enums.Profile
+import com.mercadolivro.enums.Roles
 import com.mercadolivro.exception.NotFoundException
 import com.mercadolivro.model.CustomerModel
 import com.mercadolivro.repository.CustomerRepository
@@ -32,7 +32,7 @@ class CustomerService(
 
     fun createCustomer(customer: CustomerModel){
         val customerCopy = customer.copy(
-            role = setOf(Profile.CUSTOMER),
+            role = setOf(Roles.CUSTOMER),
             password = bCrypt.encode(customer.password)
         )
         repository.save(customerCopy)

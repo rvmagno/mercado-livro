@@ -1,8 +1,6 @@
 package com.mercadolivro.controller.request
 
-import com.mercadolivro.enums.Profile
 import com.mercadolivro.validation.EmailAvailable
-import javax.persistence.*
 import javax.validation.constraints.Email
 import javax.validation.constraints.NotEmpty
 
