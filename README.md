@@ -1,11 +1,12 @@
 # mercadolivro
-POC de backend em kotlin
+POC de backend em kotlin curso [Kotlin + Spring](https://www.udemy.com/course/kotlin-spring/) 
 <br><br>
-Comando para criar serviço mysql
-> docker run --name mysql8 -v /Users/Documents/mysql/8:/var/lib/mysql -p 3306:3306 -d -e MYSQL_ROOT_PASSWORD=root mysql:8.0
+Para criar serviço mysql, acessar o arquivo docker-compose e seguir as instruções
 
-onde (/Users/Documents/mysql/8) é a pasta local onde armazenaremos as informações do banco
 
 ### iniciando a aplicação
 
 > gradle bootRun
+
+
+Necessario sempre gerar o login (email/senha) para alcançar os endpoints.
