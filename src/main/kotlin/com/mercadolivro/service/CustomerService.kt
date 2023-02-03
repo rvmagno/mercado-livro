@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable
 
 @Service
 class CustomerService(
-    val repository: CustomerRepository,
-    val bookService: BookService,
+    private val repository: CustomerRepository,
+    private val bookService: BookService,
     private val bCrypt: BCryptPasswordEncoder
 ) {
 
@@ -40,7 +40,7 @@ class CustomerService(
 
     fun updateCustomer(customerModel: CustomerModel){
         if(!repository.existsById(customerModel.id!!)){
-            throw Exception("n existe pelo id")
+            throw NotFoundException(Errors.ML201.message.format(customerModel.id), Errors.ML201.code)
         }
 
         repository.save(customerModel)

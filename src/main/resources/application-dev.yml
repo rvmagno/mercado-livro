@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/mercadolivro?createDatabaseIfNotExist=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+jwt:
+  secret: 770206c1-6be0-4423-8250-b41decaa4447
+  expiration: 999999

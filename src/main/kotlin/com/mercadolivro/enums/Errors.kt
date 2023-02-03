@@ -5,6 +5,7 @@ enum class Errors(
     var message: String
 ) {
 
+    ML000("000", "Access Denied"),
 
     ML0O1( "ML-001","Invalid Request"  ),
     ML1O1( "ML-101","Book Id %s not exists"  ),

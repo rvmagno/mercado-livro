@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service
 @Service
 class PurchaseService(
     private val repository: PurchaseRepositoty,
-    private val customerRepository: CustomerRepository,
     private val applicationEventPublisher: ApplicationEventPublisher
 ) {
 
@@ -23,10 +22,6 @@ class PurchaseService(
 
     fun update(purchaseModel: PurchaseModel) {
         repository.save(purchaseModel)
-    }
-
-    fun listByCustomer(customerId: Int, pageable: Pageable): Page<PurchaseModel> {
-        return repository.findByCustomer(customerRepository.findById(customerId).get(), pageable)
     }
 
 }

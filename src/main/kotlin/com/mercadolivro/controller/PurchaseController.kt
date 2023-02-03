@@ -7,10 +7,10 @@ import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping("purchase")
+@RequestMapping("purchases")
 class PurchaseController(
-    val service: PurchaseService,
-    val mapper: PurchaseMapper
+    private val service: PurchaseService,
+    private val mapper: PurchaseMapper
 ) {
 
     @PostMapping
